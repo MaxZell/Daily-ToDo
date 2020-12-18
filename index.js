@@ -35,23 +35,6 @@ app.post('/insert', (req) => {
   });
 })
 
-//serializer
-app.get('/serializer', function(req, res) {
-  if (req.cookies.profile) {
-    var str = new Buffer(req.cookies.profile, 'base64').toString();
-    var objekt = serialisieren.unserialize(str);
-    if (objekt.username) {
-      res.send("Hallo " + escape(objekt.username));
-    }
-  } else {
-      res.cookie('profile', "eyJ1c2VybmFtZSI6IkFkaXR5YSIsImNvdW50cnkiOiJpbmRpYSIsImNpdHkiOiJEZWxoaSJ9", {
-        maxAge: 900000,
-        httpOnly: true
-      });
-  }
-  res.send("Hello Serializer");
- });
-
 //serve app
 app.use(express.static(path.join(__dirname, 'frontend/')));
 app.get('/', function(res) {
