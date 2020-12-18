@@ -1,4 +1,5 @@
 ﻿window.onload = loadToDos();
+window.onload = getCoronaData();
 
 //show todo add div
 function showToDoAdder(){
@@ -34,7 +35,7 @@ function sendJSON(){
 
     //create new ticket div
     var ticket = document.createElement("DIV");
-    ticket.textContent =`
+    ticket.innerHTML =`
         <div class="ticket">
             <label>${myTitle}</label></br><hr>
             <label class="switch">
@@ -83,4 +84,15 @@ function loadToDos(){
 
 function ticketIsDone(){
     console.log("done");
+}
+
+function getCoronaData(){
+    fetch('/coronaApi', {method: 'GET'})
+        .then((response) => {
+            return response.text();
+        })
+        .then((data) => {
+            console.log(data);
+            document.getElementById("coronaData").textContent = data + " #stayhome";
+        });
 }

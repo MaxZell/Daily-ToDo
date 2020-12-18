@@ -107,3 +107,12 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+#coronaData{
+    position: relative;
+    float: right;
+    padding: 14px 16px;
+    right: 100px;
+    top: -70px;
+    background-color: #620402;
+    
+}
