@@ -1,15 +1,5 @@
-## Module M183
-### Vulnerabilities:
-A8:2017 Insecure Deserialization / A7:2017 Cross Site Scripting (XSS)
-
 # Daily ToDo
-
-## Branches
-* #### nonsecure
-is not secure version of the site.
-
-* #### secure
-is secure version of the site.
+To Do list which is updated every day.
 
 ### Instalation
 1. ```git clone https://github.com/MaxZell/M183.git```
