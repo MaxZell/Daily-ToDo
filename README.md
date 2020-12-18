@@ -2,8 +2,8 @@
 To Do list which is updated every day.
 
 ### Instalation
-1. ```git clone https://github.com/MaxZell/M183.git```
-2. ```cd M183/```
+1. ```git clone https://github.com/MaxZell/Daily-ToDo.git```
+2. ```cd Daily-ToDo```
 3. ```yarn install``` or ```npm install```
 
 ### Run
