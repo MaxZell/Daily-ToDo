@@ -1,7 +1,4 @@
-﻿// XSS exaple
-//<img src='x' onerror='alert("XSS Example")'>
-
-window.onload = loadToDos();
+﻿window.onload = loadToDos();
 
 //show todo add div
 function showToDoAdder(){
@@ -37,7 +34,7 @@ function sendJSON(){
 
     //create new ticket div
     var ticket = document.createElement("DIV");
-    ticket.innerHTML=`
+    ticket.textContent =`
         <div class="ticket">
             <label>${myTitle}</label></br><hr>
             <label class="switch">
