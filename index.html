@@ -5,7 +5,6 @@
 </head>
     <body>
         <h1>Daily ToDo</h1>
-        <div id="coronaData"></div>
         <div id="todoList"></div>
         <div id="toDoInput" style="visibility: hidden;">
             <h3>Add new ToDo</h3>
@@ -13,7 +12,7 @@
             <input type="text" id="title" /></br></br>
             <label>Desctiption</label></br>
             <textarea type="text" id="desc"></textarea></br></br>
-            <button onclick="sendJSON()" id="submit">Add</button>
+            <button onclick="saveTicket()" id="submit">Add</button>
         </div>
         <button id="showBtn" onclick="showToDoAdder()">&#43;</button>
         <script src="script/script.js"></script>
