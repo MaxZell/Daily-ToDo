@@ -72,6 +72,6 @@ app.get('/coronaApi', function(req, res) {
 });
 
 //port listen
-app.listen(port, () => {
+module.exports = app.listen(port, () => {
   console.log(`App listening at port: ${port}`)
 })
