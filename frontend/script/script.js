@@ -93,6 +93,8 @@ function getCoronaData(){
         })
         .then((data) => {
             console.log(data);
-            document.getElementById("coronaData").textContent = data + " #stayhome";
+            let coronaData = document.getElementById("coronaData");
+            coronaData.textContent = data + " #stayhome";
+            dcoronaData.style.visibility = "visible";
         });
 }
