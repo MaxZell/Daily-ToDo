@@ -10,3 +10,6 @@ To Do list which is updated every day.
 ### Run
 1. ```node index.js```
 2. open [http://localhost:5000](http://localhost:5000)
+
+### Run Tests
+```yarn test``` or ```npm test```
