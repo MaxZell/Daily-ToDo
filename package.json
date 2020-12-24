@@ -10,8 +10,14 @@
     "cookie-parser": "^1.4.5",
     "escape-html": "^1.0.3",
     "express": "^4.17.1",
+    "mocha": "^8.2.1",
     "mysql": "^2.18.1",
     "node-fetch": "^2.6.1",
     "node-serialize": "^0.0.4"
+  },
+  "scripts": {
+    "test": "mocha",
+    "dev": "nodemon",
+    "run": "node"
   }
 }
