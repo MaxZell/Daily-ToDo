@@ -35,20 +35,37 @@ describe("Get /coronaApi", () => {
 	})
 })
 
-// post insert
+// // post insert
 // describe("Post /insert", () => {
-// 	it("should return status 200", async () => {
+// 	it("should send title and description than insert into DB", async () => {
 //     	let res = await chai
 //         	.request(app)
 //             .post('/insert')
 //             .send({"title":"TEST", "description":"TEST"})
-//             expect('Content-Type', /json/)
+//             expect(res.status).to.equal(200)
+//             // expect('Content-Type', /json/)
 //             //check DB
-//             .end(function(err, res) {
-//                 if (err) done(err);
-//                 res.body.should.have.property('title');
-//                 res.body.participant.should.have.property('TEST');
-//             })
-//             .done();
+//             // .end(function(err, res) {
+//             //     // if (err) done(err);
+//             //     res.body.should.have.property('title');
+//             //     res.body.participant.should.have.property('TEST');
+//             // })            
 // 	})
 // })
+
+var request = require('supertest');
+it('should respond with redirect on post', function(done) {
+    request(app)
+      .post('/insert')
+      .send({"title":"TEST", "description":"TEST"})
+      .expect(200)
+      .expect('Content-Type', /json/)
+    //   .end(function(err, res) {
+    //     if (err) done(err);
+    //         res.body.should.have.property('title');
+    //         res.body.participant.should.have.property('TEST');
+    //         res.body.should.have.property('description');
+    //         res.body.participant.should.have.property('TEST');
+    //      });
+      done();
+  });
