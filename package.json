@@ -17,7 +17,6 @@
   },
   "scripts": {
     "test": "mocha",
-    "dev": "nodemon",
-    "run": "node"
+    "dev": "nodemon"
   }
 }
